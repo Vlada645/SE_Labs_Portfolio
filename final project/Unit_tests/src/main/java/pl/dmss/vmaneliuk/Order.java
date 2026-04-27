@@ -9,4 +9,7 @@ public class Order {
     public float calculateTotal(int quantity) {
         return basePrice * quantity;
     }
+    public float applyTax(float taxRate) {
+        return 0;
+    }
 }

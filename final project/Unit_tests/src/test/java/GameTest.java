@@ -41,4 +41,9 @@ public class GameTest {
         Order order = new Order(50.0f); // 50.0 is price per game
         assertEquals(150.0f, order.calculateTotal(3)); // 50 * 3
     }
+    @Test
+    public void testOrderTax() {
+        Order order = new Order(100.0f);
+        assertEquals(123.0f, order.applyTax(0.23f)); // 23% VAT
+    }
 }
