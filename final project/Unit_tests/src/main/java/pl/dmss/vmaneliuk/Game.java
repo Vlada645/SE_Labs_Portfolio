@@ -19,6 +19,9 @@ public class Game {
     }
 
     public void applyDiscount(int percent) {
-        // TDD Red Phase: Method is empty, test will fail.
+        // TDD Green Phase: Minimal implementation to pass the test
+        if (percent > 0 && percent <= 100) {
+            this.price = this.price - (this.price * percent / 100);
+        }
     }
 }
