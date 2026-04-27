@@ -10,6 +10,6 @@ public class Order {
         return basePrice * quantity;
     }
     public float applyTax(float taxRate) {
-        return 0;
+        return basePrice + (basePrice * taxRate);
     }
 }
