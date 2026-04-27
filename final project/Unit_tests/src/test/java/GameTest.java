@@ -46,4 +46,10 @@ public class GameTest {
         Order order = new Order(100.0f);
         assertEquals(123.0f, order.applyTax(0.23f)); // 23% VAT
     }
+
+    @Test
+    public void testOrderValidity() {
+        Order order = new Order(0.0f);
+        assertFalse(order.isOrderValid(), "Order with zero price should be invalid");
+    }
 }

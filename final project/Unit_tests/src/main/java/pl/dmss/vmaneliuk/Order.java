@@ -12,4 +12,7 @@ public class Order {
     public float applyTax(float taxRate) {
         return basePrice + (basePrice * taxRate);
     }
+    public boolean isOrderValid() {
+        return true;
+    }
 }
