@@ -20,4 +20,12 @@ public class GameTest {
         // Assert: Expecting 80.0, but will fail in this commit
         assertEquals(80.0f, game.getPrice(), "Price must be 80 after 20% discount");
     }
+
+    @Test
+    public void testFullDiscount() {
+        // Testing edge case: 100% discount
+        Game game = new Game("Free Game", 50.0f);
+        game.applyDiscount(100);
+        assertEquals(0.0f, game.getPrice(), "Price should be 0.0 after 100% discount");
+    }
 }
