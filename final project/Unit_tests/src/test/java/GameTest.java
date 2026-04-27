@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import pl.dmss.vmaneliuk.Game;
+import pl.dmss.vmaneliuk.Order;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -33,5 +34,11 @@ public class GameTest {
     public void testPriceValidation() {
         Game game = new Game("Free Game", -10.0f);
         assertFalse(game.isValidPrice(), "Price should not be negative");
+    }
+
+    @Test
+    public void testOrderTotal() {
+        Order order = new Order(50.0f); // 50.0 is price per game
+        assertEquals(150.0f, order.calculateTotal(3)); // 50 * 3
     }
 }
