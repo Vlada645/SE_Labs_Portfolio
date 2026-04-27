@@ -13,6 +13,6 @@ public class Order {
         return basePrice + (basePrice * taxRate);
     }
     public boolean isOrderValid() {
-        return true;
+        return basePrice > 0;
     }
 }
