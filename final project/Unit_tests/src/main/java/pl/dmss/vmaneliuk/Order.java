@@ -7,6 +7,6 @@ public class Order {
         this.basePrice = basePrice;
     }
     public float calculateTotal(int quantity) {
-        return 1;
+        return basePrice * quantity;
     }
 }
