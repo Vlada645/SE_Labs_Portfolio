@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 import pl.dmss.vmaneliuk.Game;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 /**
  * Test class for Game entity logic.
@@ -27,5 +28,10 @@ public class GameTest {
         Game game = new Game("Free Game", 50.0f);
         game.applyDiscount(100);
         assertEquals(0.0f, game.getPrice(), "Price should be 0.0 after 100% discount");
+    }
+    @Test
+    public void testPriceValidation() {
+        Game game = new Game("Free Game", -10.0f);
+        assertFalse(game.isValidPrice(), "Price should not be negative");
     }
 }

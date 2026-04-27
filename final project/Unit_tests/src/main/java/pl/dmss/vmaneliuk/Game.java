@@ -18,6 +18,11 @@ public class Game {
         return price;
     }
 
+    public boolean isValidPrice() {
+
+        return false;
+    }
+
     public void applyDiscount(int percent) {
         // TDD Green Phase: Minimal implementation to pass the test
         if (percent > 0 && percent <= 100) {
