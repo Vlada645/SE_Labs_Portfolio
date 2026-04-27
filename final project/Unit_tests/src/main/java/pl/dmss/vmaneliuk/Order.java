@@ -7,6 +7,7 @@ public class Order {
         this.basePrice = basePrice;
     }
     public float calculateTotal(int quantity) {
+        if (quantity <= 0) return 0; // Refactored to handle invalid quantities
         return basePrice * quantity;
     }
     public float applyTax(float taxRate) {
