@@ -19,8 +19,7 @@ public class Game {
     }
 
     public boolean isValidPrice() {
-
-        return false;
+        return this.price >= 0;
     }
 
     public void applyDiscount(int percent) {
