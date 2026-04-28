@@ -6,10 +6,14 @@ package pl.dmss.vmaneliuk;
 public class BugReport {
     private String status = "New";
 
+    public BugReport(String graphicsGlitch, String high) {
+
+    }
+
     public void updateStatus(String newStatus) {
         // Updates status: New -> Verified -> Fixed -> Closed [cite: 204]
         this.status = newStatus;
     }
 
-    public String getStatus() { return status; }
+    public String getStatus() { return ""; }
 }
