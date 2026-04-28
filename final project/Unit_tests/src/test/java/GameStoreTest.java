@@ -18,6 +18,6 @@ public class GameStoreTest {
     public void testRefundPolicy() {
         Order order = new Order(60.0f);
         // If owned for 5 days, refund should be allowed
-        assertTrue(order.isEligibleForRefund(5)); // This will fail now
+        assertTrue(order.isEligibleForRefund(5));
     }
 }
