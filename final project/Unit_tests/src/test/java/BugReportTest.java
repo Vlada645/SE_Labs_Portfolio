@@ -8,7 +8,7 @@ public class BugReportTest {
     public void testInitialStatus() {
         BugReport report = new BugReport("Graphics glitch", "High");
 
-        assertEquals("New", report.getStatus(), "A new report must have 'New' status");
+        assertEquals("New", report.getStatus(), "New");
     }
 
     @Test
