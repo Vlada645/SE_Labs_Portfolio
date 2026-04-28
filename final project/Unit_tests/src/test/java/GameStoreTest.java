@@ -8,10 +8,10 @@ import static org.junit.Assert.assertTrue;
 public class GameStoreTest {
     @Test
     public void testLibraryAdd() {
-        Library library = new Library(101); // ownerId = 101
+        Library library = new Library(101);
         Game game = new Game("Elden Ring", 60.0f);
         library.addGame(game);
-        assertTrue(library.hasGame("Elden Ring")); // This will fail now
+        assertTrue(library.hasGame("Elden Ring"));
     }
 
     @Test
