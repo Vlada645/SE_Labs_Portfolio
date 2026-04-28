@@ -8,7 +8,6 @@ public class Order {
         this.basePrice = basePrice;
     }
 
-    // Refactored refund logic to use constant
     public boolean isEligibleForRefund(int daysOwned) {
         return daysOwned >= 0 && daysOwned <= REFUND_WINDOW_DAYS;
     }

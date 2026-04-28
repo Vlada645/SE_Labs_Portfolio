@@ -6,10 +6,6 @@ import pl.dmss.vmaneliuk.Order;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-/**
- * Test class for Game entity logic.
- * Follows TDD principles to verify business rules defined in SRS.
- */
 public class GameTest {
 
     private Game game;
@@ -33,6 +29,7 @@ public class GameTest {
         game.applyDiscount(100);
         assertEquals(0.0f, game.getPrice(), "Price should be 0.0 after 100% discount");
     }
+
     @Test
     public void testPriceValidation() {
         Game game = new Game("Free Game", -10.0f);
@@ -44,6 +41,7 @@ public class GameTest {
         Order order = new Order(50.0f); // 50.0 is price per game
         assertEquals(150.0f, order.calculateTotal(3)); // 50 * 3
     }
+
     @Test
     public void testOrderTax() {
         Order order = new Order(100.0f);
