@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pl.dmss.vmaneliuk.Game;
 import pl.dmss.vmaneliuk.Order;
@@ -11,16 +12,18 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
  */
 public class GameTest {
 
+    private Game game;
+
+    @BeforeEach
+    public void setUp() {
+        // Shared setup for tests
+        game = new Game("Test Game", 100.0f);
+    }
+
     @Test
     public void testApplyDiscount() {
-        // Arrange: Create a game based on SRS specifications [cite: 189, 192]
-        Game game = new Game("Cyberpunk 2077", 100.0f);
-
-        // Act: Apply 20% discount
         game.applyDiscount(20);
-
-        // Assert: Expecting 80.0, but will fail in this commit
-        assertEquals(80.0f, game.getPrice(), "Price must be 80 after 20% discount");
+        assertEquals(80.0f, game.getPrice());
     }
 
     @Test
