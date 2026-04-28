@@ -10,6 +10,10 @@ public class Game {
         this.price = price;
     }
 
+    public String getTitle() {
+        return this.title;
+    }
+
     public float getPrice() {
         return price;
     }

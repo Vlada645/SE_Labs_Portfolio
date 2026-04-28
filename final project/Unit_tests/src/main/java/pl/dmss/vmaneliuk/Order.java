@@ -16,4 +16,8 @@ public class Order {
     public boolean isOrderValid() {
         return basePrice > 0;
     }
+
+    public boolean isEligibleForRefund(int i) {
+        return false;
+    }
 }
