@@ -18,6 +18,11 @@ public class Order {
     }
 
     public boolean isEligibleForRefund(int i) {
-        return false;
+        if (i <= 5) {
+            return true;
+        } else {
+            return false;
+        }
+
     }
 }
